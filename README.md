@@ -1,3 +1,26 @@
+# Локальный запуск проекта
+
+Инструкция по разворачиванию проекта локально!
+Все команды выполняются из корневой директории, в которой находится  docker-compose.yml
+
+Окружение проекта реализуется на docker-сервисах, поэтому убедитесь, что у вас установлен [docker](https://docs.docker.com/engine/installation/).
+Для упрощения работы с сервисами docker используется docker-compose - поэтому убедитесь, что у вас установлен [docker-compose](https://docs.docker.com/compose/install/).
+
+##1. Собираем проект:
+### docker-compose build
+или без кеша 
+### docker-compose build --no-cache
+
+##2. Разворачиваем дамп базы:
+ - поднимаем контейнер с базой данных
+### docker-compose up 
+
+### тестовые данные
+тестовый пользватель: testuser
+тестовй пароль: qazwsx
+
+
+
 # bgs
 
 > My fantabulous Nuxt.js project
