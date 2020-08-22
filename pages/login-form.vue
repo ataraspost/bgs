@@ -24,9 +24,12 @@
           >
             <v-text-field
               v-model="password"
+              :append-icon="show ? 'mdi-eye' : 'mdi-eye-off'"
+              :type="show ? 'text' : 'password'"
               :rules="passwordRules"
               label="Password"
               required
+              @click:append="show = !show"
             />
           </v-col>
         </v-row>
@@ -56,6 +59,7 @@ export default {
         id: 1,
         password: 'qazwsx'
       },
+      show: false,
       userName: '',
       password: '',
       errorPassword: false,
@@ -79,6 +83,9 @@ export default {
     }
   },
   mounted () {
+    if (localStorage.getItem('token')) {
+      this.$router.push({ path: `/user/${this.user.id}` })
+    }
   }
 }
 </script>

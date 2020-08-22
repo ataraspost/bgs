@@ -4,7 +4,7 @@
       <v-row justify="center">
         <v-col cols="1">
           <v-btn v-on:click="login" v-if="isLogin">Login</v-btn>
-          <v-btn v-on:clock="logout" v-else>Logout</v-btn>
+          <v-btn v-on:click="logout" v-else>Logout</v-btn>
         </v-col>
       </v-row>
     </v-container>
@@ -31,7 +31,7 @@ export default {
     }
   },
   mounted () {
-    const token = localStorage.getItem('bgcolor')
+    const token = localStorage.getItem('token')
     if (token) {
       this.isLogin = false
     }
