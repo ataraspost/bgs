@@ -12,8 +12,10 @@ services:
     - "3000:3000"
     volumes:
     - ./:/app
+    -  /app/node_modules
+
 #    Для проброски порта на хост машину
     environment:
       HOST: 0.0.0.0
-
+   
  
